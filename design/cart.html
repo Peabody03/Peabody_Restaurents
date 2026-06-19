@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart — Peabody Restaurant</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/customer.css">
+</head>
+<body class="page-enter">
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-mark">P</span> Peabody</a>
+      <ul class="nav-main">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu-categories.html">Menu</a></li>
+        <li><a href="reservation.html">Reserve</a></li>
+        <li><a href="customer-dashboard.html">My Account</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="cart.html" class="btn btn-icon cart-badge">🛒<span class="badge-count">3</span></a>
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container cart-layout">
+    <div>
+      <h1 style="font-size:1.75rem;margin-bottom:1.5rem;">Your Cart <span class="text-muted text-sm fw-medium">(3 items)</span></h1>
+
+      <div class="cart-item">
+        <img class="cart-item-thumb" src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=200&q=80" alt="Classic Pancakes">
+        <div class="cart-item-info">
+          <h3>Classic Pancakes</h3>
+          <p class="text-sm text-muted">Breakfast · Maple syrup included</p>
+          <p class="cart-item-price">$11.99</p>
+          <div class="qty-control">
+            <button data-qty-minus aria-label="Decrease">−</button>
+            <span data-qty-value>2</span>
+            <button data-qty-plus aria-label="Increase">+</button>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <p class="fw-bold" style="font-size:1.1rem;">$23.98</p>
+          <button class="btn btn-ghost btn-sm mt-2" style="color:var(--color-danger);">Remove</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img class="cart-item-thumb" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&q=80" alt="Margherita Pizza">
+        <div class="cart-item-info">
+          <h3>Margherita Pizza</h3>
+          <p class="text-sm text-muted">Lunch · 12 inch</p>
+          <p class="cart-item-price">$16.50</p>
+          <div class="qty-control">
+            <button data-qty-minus>−</button>
+            <span data-qty-value>1</span>
+            <button data-qty-plus>+</button>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <p class="fw-bold" style="font-size:1.1rem;">$16.50</p>
+          <button class="btn btn-ghost btn-sm mt-2" style="color:var(--color-danger);">Remove</button>
+        </div>
+      </div>
+
+      <a href="menu-categories.html" class="btn btn-secondary mt-2">← Continue Shopping</a>
+    </div>
+
+    <!-- Order Summary -->
+    <aside class="cart-summary">
+      <h2>Order Summary</h2>
+      <div class="summary-row"><span>Subtotal</span><span>$40.48</span></div>
+      <div class="summary-row"><span>Delivery Fee</span><span>$3.99</span></div>
+      <div class="summary-row"><span>Tax (18%)</span><span>$7.29</span></div>
+      <div class="summary-row"><span>Discount</span><span style="color:var(--color-success);">−$5.00</span></div>
+      <div class="summary-row total"><span>Total</span><span>$46.76</span></div>
+
+      <div class="form-group mt-4">
+        <label class="form-label">Promo Code</label>
+        <div class="flex gap-1">
+          <input type="text" class="form-input" placeholder="Enter code" style="flex:1;">
+          <button class="btn btn-secondary btn-sm">Apply</button>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" style="width:100%;margin-top:1rem;">Proceed to Checkout</button>
+      <p class="text-center text-xs text-muted mt-2">Secure checkout · Free cancellation within 5 min</p>
+    </aside>
+  </main>
+
+  <script src="js/ui.js"></script>
+</body>
+</html>

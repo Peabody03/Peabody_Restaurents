@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peabody Restaurant — Fine Dining & Delivery</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/customer.css">
+</head>
+<body class="page-enter">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">P</span>
+        Peabody
+      </a>
+      <ul class="nav-main">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="menu-categories.html">Menu</a></li>
+        <li><a href="reservation.html">Reserve</a></li>
+        <li><a href="customer-dashboard.html">My Account</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="cart.html" class="btn btn-icon cart-badge" aria-label="Cart">🛒<span class="badge-count">3</span></a>
+        <a href="login.html" class="btn btn-primary btn-sm hide-mobile">Sign In</a>
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-eyebrow">✨ Award-Winning Cuisine Since 2010</span>
+        <h1>Taste the Art of Fine Dining</h1>
+        <p>Experience culinary excellence with our chef-crafted dishes, made from the freshest local ingredients. Order online or reserve your table today.</p>
+        <div class="hero-cta">
+          <a href="menu-categories.html" class="btn btn-primary btn-lg">Explore Menu</a>
+          <a href="reservation.html" class="btn btn-secondary btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.1);">Book a Table</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>4.9★</strong><span>Customer Rating</span></div>
+          <div class="hero-stat"><strong>88+</strong><span>Menu Items</span></div>
+          <div class="hero-stat"><strong>15min</strong><span>Avg. Delivery</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Foods -->
+  <section class="section" style="background:var(--color-bg);">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Chef's Picks</p>
+        <h2>Featured Dishes</h2>
+        <p class="text-secondary">Handpicked favorites loved by our guests</p>
+      </div>
+      <div class="grid grid-4">
+        <article class="food-card">
+          <div class="food-card-image">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80" alt="Garden Fresh Salad">
+            <span class="food-card-badge">Popular</span>
+            <button class="food-card-fav" aria-label="Add to favorites">🤍</button>
+          </div>
+          <div class="food-card-body">
+            <h3>Garden Fresh Salad</h3>
+            <p class="food-card-price">$12.99</p>
+            <p class="food-card-desc">Crisp mixed greens, cherry tomatoes, and house vinaigrette.</p>
+            <div class="food-card-actions">
+              <button class="btn btn-primary btn-sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div class="food-card-image">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Margherita Pizza">
+            <button class="food-card-fav" aria-label="Add to favorites">🤍</button>
+          </div>
+          <div class="food-card-body">
+            <h3>Margherita Pizza</h3>
+            <p class="food-card-price">$16.50</p>
+            <p class="food-card-desc">Wood-fired crust with fresh mozzarella and basil.</p>
+            <div class="food-card-actions">
+              <button class="btn btn-primary btn-sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div class="food-card-image">
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80" alt="Grilled Salmon">
+            <span class="food-card-badge">New</span>
+            <button class="food-card-fav" aria-label="Add to favorites">🤍</button>
+          </div>
+          <div class="food-card-body">
+            <h3>Grilled Atlantic Salmon</h3>
+            <p class="food-card-price">$24.99</p>
+            <p class="food-card-desc">Pan-seared salmon with lemon butter and seasonal vegetables.</p>
+            <div class="food-card-actions">
+              <button class="btn btn-primary btn-sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div class="food-card-image">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80" alt="Chocolate Lava Cake">
+            <button class="food-card-fav" aria-label="Add to favorites">🤍</button>
+          </div>
+          <div class="food-card-body">
+            <h3>Chocolate Lava Cake</h3>
+            <p class="food-card-price">$9.99</p>
+            <p class="food-card-desc">Warm chocolate cake with molten center and vanilla ice cream.</p>
+            <div class="food-card-actions">
+              <button class="btn btn-primary btn-sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" style="background:var(--color-bg-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Our Menu</p>
+        <h2>Browse by Category</h2>
+        <p class="text-secondary">From sunrise breakfasts to late-night bites</p>
+      </div>
+      <div class="grid grid-2">
+        <a href="food-listing.html?cat=breakfast" class="category-card">
+          <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a71bec?w=800&q=80" alt="Breakfast">
+          <div class="category-card-overlay">
+            <h3>Breakfast</h3>
+            <p>Start your day with fluffy pancakes, eggs benedict, and artisan pastries.</p>
+            <span class="btn btn-primary btn-sm">View Menu →</span>
+          </div>
+        </a>
+        <a href="food-listing.html?cat=lunch" class="category-card">
+          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80" alt="Lunch">
+          <div class="category-card-overlay">
+            <h3>Lunch</h3>
+            <p>Fresh salads, gourmet sandwiches, and hearty midday favorites.</p>
+            <span class="btn btn-primary btn-sm">View Menu →</span>
+          </div>
+        </a>
+        <a href="food-listing.html?cat=dinner" class="category-card">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Dinner">
+          <div class="category-card-overlay">
+            <h3>Dinner</h3>
+            <p>Elegant entrees, premium steaks, and chef's signature creations.</p>
+            <span class="btn btn-primary btn-sm">View Menu →</span>
+          </div>
+        </a>
+        <a href="food-listing.html?cat=bits" class="category-card">
+          <img src="https://images.unsplash.com/photo-1608039755401-742074f0548b?w=800&q=80" alt="Bits">
+          <div class="category-card-overlay">
+            <h3>Bits</h3>
+            <p>Shareable appetizers, finger foods, and perfect party platters.</p>
+            <span class="btn btn-primary btn-sm">View Menu →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background:var(--color-bg);">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Testimonials</p>
+        <h2>What Our Guests Say</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The best dining experience in town. Every dish is a masterpiece, and the service is impeccable."</p>
+          <div class="testimonial-author">
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah M.">
+            <div><strong>Sarah Mitchell</strong><span>Regular Guest</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Fast delivery, food arrives hot and fresh. The salmon is absolutely divine — order it every week!"</p>
+          <div class="testimonial-author">
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="James K.">
+            <div><strong>James Kim</strong><span>Food Enthusiast</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Perfect for date nights. The ambiance, wine selection, and desserts make every visit memorable."</p>
+          <div class="testimonial-author">
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Emma L.">
+            <div><strong>Emma Lawson</strong><span>Local Food Blogger</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant Info -->
+  <section class="section" style="background:var(--color-bg-subtle);">
+    <div class="container">
+      <div class="info-section">
+        <img class="info-image" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Peabody Restaurant interior">
+        <div class="info-content">
+          <p class="eyebrow" style="color:var(--color-primary);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:0.8125rem;">Visit Us</p>
+          <h2>Peabody Restaurant</h2>
+          <p class="text-secondary">A culinary destination where tradition meets innovation. Join us for an unforgettable dining experience.</p>
+          <ul class="info-list">
+            <li>📍 123 Gourmet Avenue, Culinary District</li>
+            <li>📞 0627434348</li>
+            <li>🕐 Mon–Sun: 7:00 AM – 11:00 PM</li>
+            <li>✉️ hello@peabodyrestaurant.com</li>
+          </ul>
+          <a href="reservation.html" class="btn btn-primary mt-4" style="align-self:flex-start;">Reserve a Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="logo-mark">P</span> Peabody</a>
+          <p>Premium dining experience with fresh ingredients, exceptional service, and flavors that delight.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="menu-categories.html">Our Menu</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="order-tracking.html">Track Order</a></li>
+            <li><a href="customer-dashboard.html">My Account</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="food-listing.html?cat=breakfast">Breakfast</a></li>
+            <li><a href="food-listing.html?cat=lunch">Lunch</a></li>
+            <li><a href="food-listing.html?cat=dinner">Dinner</a></li>
+            <li><a href="food-listing.html?cat=bits">Bits</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:0627434348">0627434348</a></li>
+            <li><a href="mailto:hello@peabodyrestaurant.com">hello@peabodyrestaurant.com</a></li>
+            <li>123 Gourmet Avenue</li>
+            <li>Mon–Sun: 7AM – 11PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Peabody Restaurant. All rights reserved.</span>
+        <span>Designed with ❤️ for food lovers</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ui.js"></script>
+</body>
+</html>

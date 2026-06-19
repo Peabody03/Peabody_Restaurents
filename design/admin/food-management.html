@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Management — Peabody Admin</title>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <div class="admin-app">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-brand">
+        <span class="logo-mark">P</span>
+        <span>Peabody</span>
+      </div>
+      <nav class="admin-nav">
+        <a href="dashboard.html" class="admin-nav-link"><span class="icon">📊</span> Dashboard</a>
+        <a href="#" class="admin-nav-link"><span class="icon">💳</span> POS</a>
+        <a href="#" class="admin-nav-link"><span class="icon">📦</span> Orders</a>
+        <a href="food-management.html" class="admin-nav-link active"><span class="icon">🍽️</span> Menu Management</a>
+        <a href="#" class="admin-nav-link"><span class="icon">📅</span> Reservations</a>
+        <a href="#" class="admin-nav-link"><span class="icon">👥</span> Customers</a>
+        <a href="reports.html" class="admin-nav-link"><span class="icon">📈</span> Reports</a>
+        <a href="#" class="admin-nav-link"><span class="icon">📋</span> Inventory</a>
+        <a href="#" class="admin-nav-link"><span class="icon">⚙️</span> Settings</a>
+      </nav>
+      <div class="admin-nav-footer">
+        <a href="../login.html" class="admin-nav-link logout"><span class="icon">🚪</span> Logout</a>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <div class="admin-search">
+          <span>🔍</span>
+          <input type="search" placeholder="Search foods...">
+        </div>
+        <div class="admin-topbar-actions">
+          <button class="topbar-icon-btn">🔔<span class="notif-dot"></span></button>
+          <button class="topbar-icon-btn">💬</button>
+          <div class="admin-profile">
+            <div class="admin-profile-avatar">AD</div>
+            <div class="admin-profile-info">
+              <span class="admin-profile-name">Admin User</span>
+              <span class="admin-profile-role">Administrator</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="admin-content page-enter">
+        <div class="page-toolbar">
+          <div>
+            <h1 style="font-size:1.5rem;margin-bottom:0.25rem;">Food Management</h1>
+            <p class="text-muted text-sm">Manage your menu items across all categories</p>
+          </div>
+          <button class="btn btn-primary">+ Add Food</button>
+        </div>
+
+        <!-- Filters -->
+        <div class="listing-toolbar" style="margin-bottom:1.5rem;">
+          <div class="search-bar">
+            <span>🔍</span>
+            <input type="search" placeholder="Search by name or description...">
+          </div>
+          <div class="filter-group">
+            <button class="filter-chip active">All</button>
+            <button class="filter-chip">Breakfast</button>
+            <button class="filter-chip">Lunch</button>
+            <button class="filter-chip">Dinner</button>
+            <button class="filter-chip">Bits</button>
+          </div>
+          <select class="form-select" style="width:auto;min-width:140px;">
+            <option>All Status</option>
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+        </div>
+
+        <!-- Food Table -->
+        <div class="dash-panel">
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><img class="food-thumb" src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=100&q=80" alt="Pancakes"></td>
+                  <td><strong>Classic Pancakes</strong><br><span class="text-xs text-muted">Stack of fluffy buttermilk pancakes</span></td>
+                  <td><span class="badge badge-primary">Breakfast</span></td>
+                  <td class="fw-semibold">$11.99</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                  <td>
+                    <div class="action-btns">
+                      <button class="action-btn" title="Edit">✏️</button>
+                      <button class="action-btn danger" title="Delete">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><img class="food-thumb" src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=100&q=80" alt="Eggs Benedict"></td>
+                  <td><strong>Eggs Benedict</strong><br><span class="text-xs text-muted">Poached eggs with hollandaise</span></td>
+                  <td><span class="badge badge-primary">Breakfast</span></td>
+                  <td class="fw-semibold">$14.50</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                  <td>
+                    <div class="action-btns">
+                      <button class="action-btn">✏️</button>
+                      <button class="action-btn danger">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><img class="food-thumb" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=100&q=80" alt="Pizza"></td>
+                  <td><strong>Margherita Pizza</strong><br><span class="text-xs text-muted">Wood-fired crust with mozzarella</span></td>
+                  <td><span class="badge badge-warning">Lunch</span></td>
+                  <td class="fw-semibold">$16.50</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                  <td>
+                    <div class="action-btns">
+                      <button class="action-btn">✏️</button>
+                      <button class="action-btn danger">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><img class="food-thumb" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=100&q=80" alt="Salmon"></td>
+                  <td><strong>Grilled Atlantic Salmon</strong><br><span class="text-xs text-muted">Pan-seared with lemon butter</span></td>
+                  <td><span class="badge" style="background:#F3E8FF;color:#6B21A8;">Dinner</span></td>
+                  <td class="fw-semibold">$24.99</td>
+                  <td><span class="badge badge-success">Active</span></td>
+                  <td>
+                    <div class="action-btns">
+                      <button class="action-btn">✏️</button>
+                      <button class="action-btn danger">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><img class="food-thumb" src="https://images.unsplash.com/photo-1608039755401-742074f0548b?w=100&q=80" alt="Wings"></td>
+                  <td><strong>Buffalo Wings</strong><br><span class="text-xs text-muted">Crispy wings with blue cheese dip</span></td>
+                  <td><span class="badge" style="background:#FFE4E6;color:#9F1239;">Bits</span></td>
+                  <td class="fw-semibold">$13.99</td>
+                  <td><span class="badge" style="background:var(--color-bg-muted);color:var(--color-text-muted);">Inactive</span></td>
+                  <td>
+                    <div class="action-btns">
+                      <button class="action-btn">✏️</button>
+                      <button class="action-btn danger">🗑️</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <nav class="flex-between mt-3" style="flex-wrap:wrap;gap:1rem;">
+          <p class="text-sm text-muted">Showing 1–5 of 88 items</p>
+          <ul class="pagination">
+            <li><a href="#">←</a></li>
+            <li class="active"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><span>…</span></li>
+            <li><a href="#">18</a></li>
+            <li><a href="#">→</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Food Modal (visual demo) -->
+  <div class="modal-overlay" style="display:none;" id="addFoodModal">
+    <div class="modal">
+      <h2 style="font-size:1.25rem;margin-bottom:1.5rem;">Add New Food</h2>
+      <div class="form-group">
+        <label class="form-label">Food Name</label>
+        <input type="text" class="form-input" placeholder="Enter food name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Category</label>
+        <select class="form-select"><option>Breakfast</option><option>Lunch</option><option>Dinner</option><option>Bits</option></select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Price</label>
+        <input type="text" class="form-input" placeholder="$0.00">
+      </div>
+      <div class="flex gap-2" style="justify-content:flex-end;">
+        <button class="btn btn-secondary">Cancel</button>
+        <button class="btn btn-primary">Save Food</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/ui.js"></script>
+</body>
+</html>

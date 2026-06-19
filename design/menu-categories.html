@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Categories — Peabody Restaurant</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/customer.css">
+</head>
+<body class="page-enter">
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-mark">P</span> Peabody</a>
+      <ul class="nav-main">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu-categories.html" class="active">Menu</a></li>
+        <li><a href="reservation.html">Reserve</a></li>
+        <li><a href="customer-dashboard.html">My Account</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="cart.html" class="btn btn-icon cart-badge">🛒<span class="badge-count">3</span></a>
+        <a href="login.html" class="btn btn-primary btn-sm hide-mobile">Sign In</a>
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top:calc(var(--header-height) + 3rem);padding-bottom:4rem;">
+    <div class="container">
+      <div class="section-header mb-4">
+        <p class="eyebrow">Full Menu</p>
+        <h1>Choose Your Category</h1>
+        <p class="text-secondary">Explore our curated selection of dishes across four delicious categories</p>
+      </div>
+
+      <div class="grid grid-2">
+        <a href="food-listing.html?cat=breakfast" class="category-card">
+          <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a71bec?w=900&q=80" alt="Breakfast menu">
+          <div class="category-card-overlay">
+            <h3>Breakfast</h3>
+            <p>Fluffy pancakes, eggs benedict, avocado toast, and artisan pastries to fuel your morning.</p>
+            <span class="btn btn-primary">View Menu →</span>
+          </div>
+        </a>
+        <a href="food-listing.html?cat=lunch" class="category-card">
+          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=900&q=80" alt="Lunch menu">
+          <div class="category-card-overlay">
+            <h3>Lunch</h3>
+            <p>Fresh salads, gourmet sandwiches, soups, and hearty bowls for the perfect midday meal.</p>
+            <span class="btn btn-primary">View Menu →</span>
+          </div>
+        </a>
+        <a href="food-listing.html?cat=dinner" class="category-card">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" alt="Dinner menu">
+          <div class="category-card-overlay">
+            <h3>Dinner</h3>
+            <p>Premium steaks, seafood, pasta, and chef's signature entrees for an elegant evening.</p>
+            <span class="btn btn-primary">View Menu →</span>
+          </div>
+        </a>
+        <a href="food-listing.html?cat=bits" class="category-card">
+          <img src="https://images.unsplash.com/photo-1608039755401-742074f0548b?w=900&q=80" alt="Bits menu">
+          <div class="category-card-overlay">
+            <h3>Bits</h3>
+            <p>Shareable appetizers, sliders, wings, and finger foods perfect for any gathering.</p>
+            <span class="btn btn-primary">View Menu →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0;">
+        <span>© 2026 Peabody Restaurant · <a href="tel:0627434348" style="color:rgba(255,255,255,0.65);">0627434348</a></span>
+        <span><a href="index.html" style="color:rgba(255,255,255,0.65);">← Back to Home</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Peabody Restaurant</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <div class="admin-app">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-brand">
+        <span class="logo-mark">P</span>
+        <span>Peabody</span>
+      </div>
+      <nav class="admin-nav">
+        <a href="dashboard.html" class="admin-nav-link active"><span class="icon">📊</span> Dashboard</a>
+        <a href="#" class="admin-nav-link"><span class="icon">💳</span> POS</a>
+        <a href="#" class="admin-nav-link"><span class="icon">📦</span> Orders</a>
+        <a href="food-management.html" class="admin-nav-link"><span class="icon">🍽️</span> Menu Management</a>
+        <a href="#" class="admin-nav-link"><span class="icon">📅</span> Reservations</a>
+        <a href="#" class="admin-nav-link"><span class="icon">👥</span> Customers</a>
+        <a href="reports.html" class="admin-nav-link"><span class="icon">📈</span> Reports</a>
+        <a href="#" class="admin-nav-link"><span class="icon">📋</span> Inventory</a>
+        <a href="#" class="admin-nav-link"><span class="icon">⚙️</span> Settings</a>
+      </nav>
+      <div class="admin-nav-footer">
+        <a href="../login.html" class="admin-nav-link logout"><span class="icon">🚪</span> Logout</a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="admin-main">
+      <!-- Topbar -->
+      <header class="admin-topbar">
+        <div class="admin-search">
+          <span>🔍</span>
+          <input type="search" placeholder="Search orders, foods, customers...">
+        </div>
+        <div class="admin-topbar-actions">
+          <button class="topbar-icon-btn" aria-label="Notifications">🔔<span class="notif-dot"></span></button>
+          <button class="topbar-icon-btn" aria-label="Messages">💬</button>
+          <div class="admin-profile">
+            <div class="admin-profile-avatar">AD</div>
+            <div class="admin-profile-info">
+              <span class="admin-profile-name">Admin User</span>
+              <span class="admin-profile-role">Administrator</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <div class="admin-content page-enter">
+        <div class="dash-header">
+          <div>
+            <h1>Good afternoon, Admin 👋</h1>
+            <p>Here's what's happening at Peabody today.</p>
+          </div>
+          <div class="dash-filters">
+            <button class="btn btn-secondary btn-sm">Today</button>
+            <button class="btn btn-primary btn-sm">This Week</button>
+            <button class="btn btn-secondary btn-sm">This Month</button>
+          </div>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-card-top">
+              <div class="kpi-icon orange">💰</div>
+              <span class="kpi-trend up">↑ 12.5%</span>
+            </div>
+            <p class="kpi-label">Total Revenue</p>
+            <p class="kpi-value">$<span data-count="48250">0</span></p>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card-top">
+              <div class="kpi-icon blue">📊</div>
+              <span class="kpi-trend up">↑ 8.2%</span>
+            </div>
+            <p class="kpi-label">Average Order Value</p>
+            <p class="kpi-value">$<span data-count="38">0</span>.50</p>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card-top">
+              <div class="kpi-icon green">📦</div>
+              <span class="kpi-trend up">↑ 15.3%</span>
+            </div>
+            <p class="kpi-label">Total Orders</p>
+            <p class="kpi-value"><span data-count="1256">0</span></p>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card-top">
+              <div class="kpi-icon purple">🍽️</div>
+              <span class="kpi-trend up">↑ 6.7%</span>
+            </div>
+            <p class="kpi-label">Items Sold</p>
+            <p class="kpi-value"><span data-count="3842">0</span></p>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card-top">
+              <div class="kpi-icon amber">👥</div>
+              <span class="kpi-trend up">↑ 22.1%</span>
+            </div>
+            <p class="kpi-label">Total Customers</p>
+            <p class="kpi-value"><span data-count="892">0</span></p>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card-top">
+              <div class="kpi-icon rose">📅</div>
+              <span class="kpi-trend down">↓ 3.2%</span>
+            </div>
+            <p class="kpi-label">Reservations</p>
+            <p class="kpi-value"><span data-count="156">0</span></p>
+          </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="dash-grid">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h2>Revenue Analytics</h2>
+              <select class="form-select" style="width:auto;font-size:0.8125rem;padding:0.4rem 0.75rem;">
+                <option>Last 7 days</option>
+                <option>Last 30 days</option>
+              </select>
+            </div>
+            <div class="dash-panel-body">
+              <div class="chart-placeholder">
+                <div class="chart-bar" style="height:45%;"></div>
+                <div class="chart-bar" style="height:65%;"></div>
+                <div class="chart-bar" style="height:55%;"></div>
+                <div class="chart-bar" style="height:80%;"></div>
+                <div class="chart-bar" style="height:70%;"></div>
+                <div class="chart-bar" style="height:90%;"></div>
+                <div class="chart-bar" style="height:75%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h2>Top Selling Foods</h2>
+            </div>
+            <div class="dash-panel-body">
+              <div class="top-item-row">
+                <span class="top-item-rank">1</span>
+                <div class="top-item-info">
+                  <span class="top-item-name">Classic Pancakes</span>
+                  <span class="top-item-meta">248 sold · $2,975</span>
+                </div>
+              </div>
+              <div class="top-item-row">
+                <span class="top-item-rank">2</span>
+                <div class="top-item-info">
+                  <span class="top-item-name">Grilled Atlantic Salmon</span>
+                  <span class="top-item-meta">186 sold · $4,648</span>
+                </div>
+              </div>
+              <div class="top-item-row">
+                <span class="top-item-rank">3</span>
+                <div class="top-item-info">
+                  <span class="top-item-name">Margherita Pizza</span>
+                  <span class="top-item-meta">172 sold · $2,838</span>
+                </div>
+              </div>
+              <div class="top-item-row">
+                <span class="top-item-rank">4</span>
+                <div class="top-item-info">
+                  <span class="top-item-name">Chocolate Lava Cake</span>
+                  <span class="top-item-meta">154 sold · $1,538</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orders & Categories -->
+        <div class="dash-grid">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h2>Recent Orders</h2>
+              <a href="#" class="text-sm">View All →</a>
+            </div>
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Items</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>#1042</strong></td>
+                    <td>Sarah Mitchell</td>
+                    <td>3 items</td>
+                    <td>$41.26</td>
+                    <td><span class="badge badge-warning">Preparing</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#1041</strong></td>
+                    <td>James Kim</td>
+                    <td>2 items</td>
+                    <td>$28.50</td>
+                    <td><span class="badge badge-primary">Out for Delivery</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#1040</strong></td>
+                    <td>Emma Lawson</td>
+                    <td>5 items</td>
+                    <td>$67.99</td>
+                    <td><span class="badge badge-success">Delivered</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#1039</strong></td>
+                    <td>Michael Chen</td>
+                    <td>1 item</td>
+                    <td>$16.50</td>
+                    <td><span class="badge badge-success">Delivered</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h2>Popular Categories</h2>
+            </div>
+            <div class="dash-panel-body">
+              <div class="mb-3">
+                <div class="flex-between text-sm mb-1"><span>Breakfast</span><span class="fw-semibold">32%</span></div>
+                <div class="progress"><div class="progress-bar" style="width:32%;"></div></div>
+              </div>
+              <div class="mb-3">
+                <div class="flex-between text-sm mb-1"><span>Lunch</span><span class="fw-semibold">28%</span></div>
+                <div class="progress"><div class="progress-bar" style="width:28%;"></div></div>
+              </div>
+              <div class="mb-3">
+                <div class="flex-between text-sm mb-1"><span>Dinner</span><span class="fw-semibold">25%</span></div>
+                <div class="progress"><div class="progress-bar" style="width:25%;"></div></div>
+              </div>
+              <div>
+                <div class="flex-between text-sm mb-1"><span>Bits</span><span class="fw-semibold">15%</span></div>
+                <div class="progress"><div class="progress-bar" style="width:15%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Customer Growth -->
+        <div class="dash-panel">
+          <div class="dash-panel-header">
+            <h2>Customer Growth</h2>
+            <span class="badge badge-success">+22.1% this month</span>
+          </div>
+          <div class="dash-panel-body">
+            <div class="chart-placeholder" style="height:160px;">
+              <div class="chart-bar" style="height:30%;opacity:0.5;"></div>
+              <div class="chart-bar" style="height:40%;opacity:0.55;"></div>
+              <div class="chart-bar" style="height:35%;opacity:0.6;"></div>
+              <div class="chart-bar" style="height:50%;opacity:0.65;"></div>
+              <div class="chart-bar" style="height:55%;opacity:0.7;"></div>
+              <div class="chart-bar" style="height:65%;opacity:0.8;"></div>
+              <div class="chart-bar" style="height:75%;opacity:0.9;"></div>
+              <div class="chart-bar" style="height:90%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/ui.js"></script>
+</body>
+</html>

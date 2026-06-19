@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Order — Peabody Restaurant</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/customer.css">
+</head>
+<body class="page-enter">
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-mark">P</span> Peabody</a>
+      <ul class="nav-main">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu-categories.html">Menu</a></li>
+        <li><a href="customer-dashboard.html" class="active">My Account</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="cart.html" class="btn btn-icon cart-badge">🛒</a>
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container dashboard-layout">
+    <nav class="text-sm text-muted mb-3">
+      <a href="customer-dashboard.html">Dashboard</a> / <strong style="color:var(--color-text);">Order #1042</strong>
+    </nav>
+
+    <div class="flex-between mb-4" style="flex-wrap:wrap;gap:1rem;">
+      <div>
+        <h1 style="font-size:1.75rem;">Order #1042</h1>
+        <p class="text-secondary">Placed on Jun 15, 2026 at 11:32 AM · Estimated delivery: 12:05 PM</p>
+      </div>
+      <span class="badge badge-warning" style="font-size:0.875rem;padding:0.5rem 1rem;">Preparing</span>
+    </div>
+
+    <!-- Timeline Tracker -->
+    <div class="tracker mb-4">
+      <h2 style="font-size:1.1rem;margin-bottom:0.5rem;">Order Status</h2>
+      <p class="text-sm text-muted mb-2">Your order is being prepared by our kitchen team</p>
+
+      <div class="tracker-steps">
+        <div class="tracker-progress" style="width:50%;"></div>
+
+        <div class="tracker-step completed">
+          <div class="tracker-dot">✓</div>
+          <span>Pending</span>
+        </div>
+        <div class="tracker-step completed">
+          <div class="tracker-dot">✓</div>
+          <span>Confirmed</span>
+        </div>
+        <div class="tracker-step active">
+          <div class="tracker-dot">🍳</div>
+          <span>Preparing</span>
+        </div>
+        <div class="tracker-step">
+          <div class="tracker-dot">📦</div>
+          <span>Ready for Pickup</span>
+        </div>
+        <div class="tracker-step">
+          <div class="tracker-dot">🚗</div>
+          <span>Out for Delivery</span>
+        </div>
+        <div class="tracker-step">
+          <div class="tracker-dot">✅</div>
+          <span>Delivered</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="gap:2rem;">
+      <!-- Order Items -->
+      <div class="card">
+        <div class="card-body">
+          <h2 style="font-size:1.1rem;margin-bottom:1rem;">Order Items</h2>
+          <div class="cart-item" style="border:none;padding:0.75rem 0;margin:0;box-shadow:none;">
+            <img class="cart-item-thumb" style="width:64px;height:64px;" src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=150&q=80" alt="Pancakes">
+            <div class="cart-item-info">
+              <h3 style="font-size:0.9rem;">Classic Pancakes × 2</h3>
+              <p class="cart-item-price" style="font-size:0.9rem;">$23.98</p>
+            </div>
+          </div>
+          <div class="cart-item" style="border:none;padding:0.75rem 0;margin:0;box-shadow:none;">
+            <img class="cart-item-thumb" style="width:64px;height:64px;" src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=150&q=80" alt="Avocado Toast">
+            <div class="cart-item-info">
+              <h3 style="font-size:0.9rem;">Avocado Toast × 1</h3>
+              <p class="cart-item-price" style="font-size:0.9rem;">$10.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery Info -->
+      <div class="card">
+        <div class="card-body">
+          <h2 style="font-size:1.1rem;margin-bottom:1rem;">Delivery Details</h2>
+          <div class="summary-detail"><span>Delivery Address</span><span>123 Gourmet Ave, Apt 4B</span></div>
+          <div class="summary-detail"><span>Contact</span><span>0627434348</span></div>
+          <div class="summary-detail"><span>Payment</span><span>Card ending 4242</span></div>
+          <div class="summary-detail"><span>Subtotal</span><span>$34.97</span></div>
+          <div class="summary-detail"><span>Delivery + Tax</span><span>$6.29</span></div>
+          <div class="summary-detail" style="font-weight:700;color:var(--color-primary);"><span>Total</span><span>$41.26</span></div>
+          <button class="btn btn-secondary btn-sm mt-3" style="width:100%;">Contact Support</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/ui.js"></script>
+</body>
+</html>

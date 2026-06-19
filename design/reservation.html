@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve a Table — Peabody Restaurant</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/customer.css">
+</head>
+<body class="page-enter">
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-mark">P</span> Peabody</a>
+      <ul class="nav-main">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu-categories.html">Menu</a></li>
+        <li><a href="reservation.html" class="active">Reserve</a></li>
+        <li><a href="customer-dashboard.html">My Account</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="cart.html" class="btn btn-icon cart-badge">🛒</a>
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container reservation-layout">
+    <div>
+      <h1 style="font-size:1.75rem;margin-bottom:0.5rem;">Reserve a Table</h1>
+      <p class="text-secondary mb-4">Book your dining experience at Peabody Restaurant</p>
+
+      <div class="card">
+        <div class="card-body" style="padding:2rem;">
+          <form>
+            <div class="grid grid-2" style="gap:1rem;">
+              <div class="form-group">
+                <label class="form-label" for="date">Date</label>
+                <input type="date" id="date" class="form-input" value="2026-06-20">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="time">Time</label>
+                <select id="time" class="form-select">
+                  <option>6:00 PM</option>
+                  <option>6:30 PM</option>
+                  <option selected>7:00 PM</option>
+                  <option>7:30 PM</option>
+                  <option>8:00 PM</option>
+                  <option>8:30 PM</option>
+                  <option>9:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="guests">Number of Guests</label>
+              <select id="guests" class="form-select">
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option selected>4 Guests</option>
+                <option>6 Guests</option>
+                <option>8 Guests</option>
+                <option>10+ Guests (call us)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="name">Full Name</label>
+              <input type="text" id="name" class="form-input" placeholder="Your full name" value="Sarah Mitchell">
+            </div>
+
+            <div class="grid grid-2" style="gap:1rem;">
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" class="form-input" placeholder="you@example.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone</label>
+                <input type="tel" id="phone" class="form-input" placeholder="0627434348">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="requests">Special Requests</label>
+              <textarea id="requests" class="form-textarea" rows="4" placeholder="Allergies, seating preferences, celebration notes..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Confirm Reservation</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reservation Summary -->
+    <aside class="reservation-summary">
+      <h3>Reservation Summary</h3>
+      <div class="summary-detail"><span>Restaurant</span><span>Peabody</span></div>
+      <div class="summary-detail"><span>Date</span><span>Fri, Jun 20, 2026</span></div>
+      <div class="summary-detail"><span>Time</span><span>7:00 PM</span></div>
+      <div class="summary-detail"><span>Guests</span><span>4 people</span></div>
+      <div class="summary-detail"><span>Seating</span><span>Indoor Dining</span></div>
+
+      <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--color-border-light);">
+        <p class="text-sm text-muted mb-2">📍 123 Gourmet Avenue</p>
+        <p class="text-sm text-muted mb-2">📞 0627434348</p>
+        <p class="text-sm text-muted">🕐 Open Mon–Sun: 7AM – 11PM</p>
+      </div>
+
+      <div class="alert alert-info mt-3" style="margin-bottom:0;">
+        <span>ℹ️</span>
+        <div class="text-sm">Free cancellation up to 2 hours before your reservation.</div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0;">
+        <span>© 2026 Peabody Restaurant · <a href="tel:0627434348" style="color:rgba(255,255,255,0.65);">0627434348</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ui.js"></script>
+</body>
+</html>

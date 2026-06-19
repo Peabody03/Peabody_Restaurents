@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Insights — Peabody Customer Dashboard</title>
+  <link rel="stylesheet" href="../frontend/web/css/customer-dashboard.css">
+</head>
+<body class="customer-app-body page-enter"
+      data-live-url=""
+      data-menu-url="food-listing.html">
+
+<div class="customer-app">
+  <aside class="customer-sidebar" id="customerSidebar">
+    <div class="customer-sidebar-brand">
+      <span class="customer-logo-mark">P</span>
+      <span class="customer-brand-text">PEABODY</span>
+    </div>
+    <nav class="customer-nav">
+      <a href="customer-dashboard.html" class="customer-nav-link active"><span class="customer-nav-icon">📊</span> Dashboard</a>
+      <a href="menu-categories.html" class="customer-nav-link"><span class="customer-nav-icon">🍽️</span> Menu</a>
+      <a href="order-tracking.html" class="customer-nav-link"><span class="customer-nav-icon">📦</span> My Order</a>
+      <a href="cart.html" class="customer-nav-link"><span class="customer-nav-icon">🛒</span> Cart</a>
+      <a href="#" class="customer-nav-link"><span class="customer-nav-icon">📋</span> Inventory</a>
+      <a href="register.html" class="customer-nav-link"><span class="customer-nav-icon">⚙️</span> Settings</a>
+    </nav>
+    <div class="customer-nav-footer">
+      <a href="login.html" class="customer-nav-link logout"><span class="customer-nav-icon">🚪</span> Logout</a>
+    </div>
+  </aside>
+
+  <div class="customer-main">
+    <header class="customer-topbar">
+      <button type="button" class="customer-sidebar-toggle" id="sidebarToggle">☰</button>
+      <form class="customer-search" role="search">
+        <span class="customer-search-icon">🔍</span>
+        <input type="search" placeholder="Search menu food...">
+      </form>
+      <div class="customer-topbar-actions">
+        <div class="customer-profile">
+          <div class="customer-profile-avatar">SM</div>
+          <div class="customer-profile-info">
+            <span class="customer-profile-name">sarah_m</span>
+            <span class="customer-profile-role">Customer</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="customer-content">
+      <div class="cd-dash-header">
+        <div>
+          <div class="cd-live-badge"><span class="cd-live-dot"></span> Live Insights <span id="lastUpdated" style="font-weight:500;margin-left:0.25rem;">· Auto-refresh every 10s</span></div>
+          <h1>Peabody_Restaurent</h1>
+          <p class="cd-subtitle">Welcome back, sarah_m — here's your activity overview.</p>
+        </div>
+        <div class="cd-dash-filters">
+          <select class="cd-filter-select" id="branchFilter"><option>All Branches</option></select>
+          <select class="cd-filter-date" id="dateFilter"><option>Today / 28 April 2026</option></select>
+          <a href="register.html" class="cd-btn-account">👤 Account</a>
+        </div>
+      </div>
+
+      <div class="cd-kpi-grid">
+        <div class="cd-kpi-card">
+          <p class="cd-kpi-label">Average Order (TZS)</p>
+          <p class="cd-kpi-value" id="kpiAvgOrder" data-current="38500">TZS 38,500</p>
+          <span class="cd-kpi-trend up">Your spending average</span>
+        </div>
+        <div class="cd-kpi-card">
+          <p class="cd-kpi-label">Total Orders (Count)</p>
+          <p class="cd-kpi-value" id="kpiTotalOrders" data-current="12">12</p>
+          <p class="cd-kpi-meta">Cart items: 3</p>
+        </div>
+      </div>
+
+      <div class="cd-panels-grid">
+        <section class="cd-panel">
+          <div class="cd-panel-header"><h2>Recent Orders</h2><a href="order-tracking.html" style="font-size:0.8125rem;color:var(--cd-primary);">View all →</a></div>
+          <div class="cd-panel-body">
+            <table class="cd-table">
+              <thead><tr><th>Order ID</th><th>Items</th><th>Total</th><th>Status</th><th>Date</th></tr></thead>
+              <tbody id="recentOrdersBody">
+                <tr><td><strong>PB-A1B2C3D4-521</strong></td><td>Classic Pancakes, Avocado Toast</td><td>TZS 41,260</td><td><span class="cd-status-badge preparing">Preparing</span></td><td style="color:var(--cd-text-muted);">Jun 15, 11:32</td></tr>
+                <tr><td><strong>PB-E5F6G7H8-892</strong></td><td>Margherita Pizza</td><td>TZS 28,500</td><td><span class="cd-status-badge delivered">Delivered</span></td><td style="color:var(--cd-text-muted);">Jun 14, 19:15</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="cd-panel">
+          <div class="cd-panel-header"><h2>Top Buying Items</h2></div>
+          <div class="cd-panel-body" id="topItemsList">
+            <div class="cd-top-item"><span class="cd-top-rank">1</span><div class="cd-top-info"><span class="cd-top-name">Classic Pancakes</span><span class="cd-top-meta">8 purchased · TZS 95,920</span></div><div class="cd-top-bar-wrap"><div class="cd-top-bar" style="width:100%"></div></div></div>
+            <div class="cd-top-item"><span class="cd-top-rank">2</span><div class="cd-top-info"><span class="cd-top-name">Grilled Salmon</span><span class="cd-top-meta">5 purchased · TZS 124,950</span></div><div class="cd-top-bar-wrap"><div class="cd-top-bar" style="width:62%"></div></div></div>
+            <div class="cd-top-item"><span class="cd-top-rank">3</span><div class="cd-top-info"><span class="cd-top-name">Margherita Pizza</span><span class="cd-top-meta">4 purchased · TZS 66,000</span></div><div class="cd-top-bar-wrap"><div class="cd-top-bar" style="width:50%"></div></div></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script>
+// Static demo: simulate live polling
+(function () {
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('customerSidebar');
+  toggle?.addEventListener('click', () => sidebar?.classList.toggle('open'));
+
+  let orders = 12;
+  setInterval(() => {
+    orders += Math.random() > 0.7 ? 1 : 0;
+    const el = document.getElementById('kpiTotalOrders');
+    if (el) { el.textContent = orders; el.closest('.cd-kpi-card')?.classList.add('updating'); setTimeout(() => el.closest('.cd-kpi-card')?.classList.remove('updating'), 600); }
+    const ts = document.getElementById('lastUpdated');
+    if (ts) ts.textContent = '· Updated ' + new Date().toLocaleTimeString();
+  }, 10000);
+})();
+</script>
+</body>
+</html>

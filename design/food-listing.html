@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakfast Menu — Peabody Restaurant</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/customer.css">
+</head>
+<body class="page-enter">
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-mark">P</span> Peabody</a>
+      <ul class="nav-main">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu-categories.html" class="active">Menu</a></li>
+        <li><a href="reservation.html">Reserve</a></li>
+        <li><a href="customer-dashboard.html">My Account</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="cart.html" class="btn btn-icon cart-badge">🛒<span class="badge-count">3</span></a>
+        <a href="login.html" class="btn btn-primary btn-sm hide-mobile">Sign In</a>
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:calc(var(--header-height) + 2rem);padding-bottom:4rem;">
+    <nav class="text-sm text-muted mb-3">
+      <a href="index.html">Home</a> / <a href="menu-categories.html">Menu</a> / <strong style="color:var(--color-text);">Breakfast</strong>
+    </nav>
+
+    <div class="flex-between mb-4" style="flex-wrap:wrap;gap:1rem;">
+      <div>
+        <h1 style="font-size:2rem;margin-bottom:0.25rem;">Breakfast</h1>
+        <p class="text-secondary">22 delicious items · Start your day right</p>
+      </div>
+      <a href="menu-categories.html" class="btn btn-secondary btn-sm">← All Categories</a>
+    </div>
+
+    <!-- Search & Filters -->
+    <div class="listing-toolbar">
+      <div class="search-bar">
+        <span>🔍</span>
+        <input type="search" placeholder="Search breakfast items...">
+      </div>
+      <div class="filter-group">
+        <button class="filter-chip active">All</button>
+        <button class="filter-chip">Vegetarian</button>
+        <button class="filter-chip">Popular</button>
+        <button class="filter-chip">Under $15</button>
+      </div>
+      <select class="form-select" style="width:auto;min-width:160px;">
+        <option>Sort: Popular</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Name: A–Z</option>
+      </select>
+    </div>
+
+    <!-- Food Grid -->
+    <div class="grid grid-3">
+      <article class="food-card">
+        <div class="food-card-image">
+          <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&q=80" alt="Classic Pancakes">
+          <span class="food-card-badge">Best Seller</span>
+          <button class="food-card-fav">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <h3>Classic Pancakes</h3>
+          <p class="food-card-price">$11.99</p>
+          <p class="food-card-desc">Stack of fluffy buttermilk pancakes with maple syrup and butter.</p>
+          <div class="food-card-actions"><button class="btn btn-primary btn-sm">Add to Cart</button></div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-card-image">
+          <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=80" alt="Eggs Benedict">
+          <button class="food-card-fav">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <h3>Eggs Benedict</h3>
+          <p class="food-card-price">$14.50</p>
+          <p class="food-card-desc">Poached eggs on English muffin with hollandaise sauce.</p>
+          <div class="food-card-actions"><button class="btn btn-primary btn-sm">Add to Cart</button></div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-card-image">
+          <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=600&q=80" alt="Avocado Toast">
+          <button class="food-card-fav">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <h3>Avocado Toast</h3>
+          <p class="food-card-price">$10.99</p>
+          <p class="food-card-desc">Sourdough toast with smashed avocado, cherry tomatoes, and feta.</p>
+          <div class="food-card-actions"><button class="btn btn-primary btn-sm">Add to Cart</button></div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-card-image">
+          <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80" alt="Breakfast Burger">
+          <button class="food-card-fav">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <h3>Breakfast Burger</h3>
+          <p class="food-card-price">$13.99</p>
+          <p class="food-card-desc">Beef patty with fried egg, bacon, and cheddar on brioche bun.</p>
+          <div class="food-card-actions"><button class="btn btn-primary btn-sm">Add to Cart</button></div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-card-image">
+          <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=600&q=80" alt="French Toast">
+          <button class="food-card-fav">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <h3>Brioche French Toast</h3>
+          <p class="food-card-price">$12.50</p>
+          <p class="food-card-desc">Thick brioche slices with cinnamon, berries, and whipped cream.</p>
+          <div class="food-card-actions"><button class="btn btn-primary btn-sm">Add to Cart</button></div>
+        </div>
+      </article>
+      <article class="food-card">
+        <div class="food-card-image">
+          <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80" alt="Omelette">
+          <button class="food-card-fav">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <h3>Three-Cheese Omelette</h3>
+          <p class="food-card-price">$11.50</p>
+          <p class="food-card-desc">Fluffy omelette with cheddar, gruyère, and parmesan.</p>
+          <div class="food-card-actions"><button class="btn btn-primary btn-sm">Add to Cart</button></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Pagination -->
+    <nav class="flex-center mt-4" aria-label="Pagination">
+      <ul class="pagination">
+        <li><a href="#">←</a></li>
+        <li class="active"><span>1</span></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">→</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0;">
+        <span>© 2026 Peabody Restaurant · <a href="tel:0627434348" style="color:rgba(255,255,255,0.65);">0627434348</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ui.js"></script>
+</body>
+</html>
